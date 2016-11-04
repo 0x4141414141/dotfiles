@@ -1,1 +1,11 @@
-alias ll = ls -lha
+alias ll="ls -lha"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+
+alias dt="cd ~/dotfiles"
+alias dl="cd ~/Downloads"
+alias p="cd ~/pentest-env"
+alias #="cd ~/"
