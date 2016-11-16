@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc smyck.zsh.theme tmux.conf bashrc vimrc vim zshrc oh-my-zsh zshrc aliases gdbinit moc zshrc gdbinit"    # list of files/folders to symlink in homedir
+files="cheat bashrc smyck.zsh.theme tmux.conf bashrc vimrc vim zshrc oh-my-zsh zshrc aliases gdbinit moc zshrc gdbinit"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -29,3 +29,7 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+# additional stuff
+export DEFAULT_CHEAT_DIR='$HOME/dotfiles/cheat'
+export CHEATCOLORS=true
