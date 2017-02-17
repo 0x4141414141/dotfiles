@@ -5,6 +5,7 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+set background=dark
 let mapleader=" "
 set hidden
 set history=100
@@ -34,3 +35,4 @@ Plug 'mmai/vim-markdown-wiki'
 Plug 'https://github.com/prashanthellina/follow-markdown-links'
 " Add plugins to &runtimepath
 call plug#end()
+Plug 'morhetz/gruvbox'

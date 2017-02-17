@@ -29,7 +29,3 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
-
-# additional stuff
-export DEFAULT_CHEAT_DIR='$HOME/dotfiles/cheat'
-export CHEATCOLORS=true
