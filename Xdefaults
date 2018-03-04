@@ -29,7 +29,7 @@
 URxvt.saveLines: 1000
 URxvt.scrollBar: false
 URxvt.secondaryScroll: true
-URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=11
 URxvt.perl-ext-common: default,matcher
 URxvt.urlLauncher: firefox
 URxvt.matcher.button: 1
