@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="cheat bashrc smyck.zsh.theme tmux.conf bashrc vimrc vim zshrc oh-my-zsh zshrc aliases gdbinit moc zshrc gdbinit"    # list of files/folders to symlink in homedir
+files="cheat bashrc smyck.zsh.theme tmux.conf bashrc vimrc vim zshrc oh-my-zsh zshrc aliases gdbinit moc zshrc gdbinit config"    # list of files/folders to symlink in homedir
 
 ##########
 

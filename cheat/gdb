@@ -1,3 +1,4 @@
+
 set disassembly-flavor intel
 
 $ cat ~/.bash_aliases | grep gdb
@@ -56,3 +57,16 @@ watch variable==value           - break when variable equals ..
 watch $eax == 0x0000ffaa        - break when register equals ..
 rwatch *[addr]                  - break on read memory location
 awatch *[addr]                  - break on read/write memory location
+
+Print Registers, Stack, next 2 Instructions when Breakpoint hit
+------------------
+set breakpoints
+set define hook-stop
+info registers
+x/24wx $esp
+x/2i $ebp
+
+
+Print X times A with Python
+------------------
+python -c 'print "A"*(64)' 
