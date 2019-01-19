@@ -1,0 +1,15 @@
+[PlasmaRunnerManager]
+LaunchCounts=1 services_firefox.desktop,1 services_org.kde.konsole.desktop,1 services_systemsettings.desktop,1 services_kcm_touchpad.desktop,1 services_kwintouchscreen.desktop,1 services_mouse.desktop
+pluginWhiteList=services,places,desktopsessions,PowerDevil,shell,bookmarks,recentdocuments,locations,baloosearch
+
+[PlasmaTransientsConfig]
+PreloadWeight=34
+
+[PlasmaViews][Panel 23][Horizontal1280]
+thickness=36
+
+[ScreenConnectors]
+0=LVDS-1
+
+[Updates]
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js
