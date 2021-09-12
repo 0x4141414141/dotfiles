@@ -1,2 +1,0 @@
-#ROT13
-echo "YRIRY GJB CNFFJBEQ EBGGRA" | python -c 'import sys; print sys.stdin.read().encode("rot13")'

@@ -1,2 +1,0 @@
-#print disk usage of directory
-du -sh

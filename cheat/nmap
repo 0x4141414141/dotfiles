@@ -1,5 +1,0 @@
-# Ping scan complete Subnet for Hosts
-nmap -sP 192.168.0.0/24
-
-#TCP scan ; open TCP connection to 1000 common ports
-nmap -sT 192.168.0.0
