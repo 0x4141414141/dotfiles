@@ -1,0 +1,162 @@
+[settings]
+throttle-ms = 100
+throttle-limit = 5
+
+[bar/top]
+width = 100%
+height = 32
+background = #282c34
+foreground = #abb2bf
+spacing = 4
+underline-size = 4
+overline-size = 4
+padding = 2
+font-0 = Bitstream Vera Sans:pixelsize=9;2
+font-1 = Fira Code:pixelsize=9;2
+dpi-x = 96
+dpi-y = 96
+modules-left = launcher i3 xwindow
+modules-center = 
+modules-right = cpu  wireless-network memory battery backlight pulseaudio day clock
+
+[module/launcher]
+type = custom/text
+click-left = launch
+content = ◰
+content-background = #98c379
+content-foreground = #2c323c
+content-padding = 2
+content-overline = #282c34
+content-underline = #282c34
+
+[module/i3]
+type = internal/i3
+strip-ws_numbers = false
+infex-sort = true
+fuzzy-match = true
+format = <label-state> <label-mode>
+label-focused = %name%
+label-focused-padding = 2
+label-focused-background = #3e4452
+label-focused-foreground = #abb2bf
+label-focused-underline = #282c34
+label-focused-overline = #282c34
+label-occupied = %name%
+label-occupied-padding = 2
+label-occupied-background = #282c34
+label-occupied-foreground = #abb2bf
+label-occupied-underline = #282c34
+label-occupied-overline = #282c34
+label-urgent = %name%
+label-urgent-padding = 2
+label-empty = %name%
+label-empty-padding = 2
+label-empty-background= #282c34
+label-empty-foreground = #5c6370
+label-empty-underline = #282c34
+label-empty-overline = #282c34
+
+ws-icon-0 = 1;♚
+ws-icon-1 = 2;♛
+ws-icon-2 = 3;♜
+ws-icon-3 = 4;♝
+ws-icon-4 = 5;♞
+
+[module/xwindow]
+type = internal/xwindow 
+label = %{A3:bspc node -c:} %title:0:48:...% %{A}
+format-overline = #282c34
+format-underline = #282c34
+format-foreground = #98c379
+label-padding = 2
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume = <label-volume><bar-volume>
+format-volume-padding = 4
+format-muted-padding = 4
+label-volume =
+label-volume-foreground = ${root.foreground}
+label-muted = ────────────────────
+label-muted-foreground = #e06c75
+bar-volume-width = 20
+bar-volume-foreground-0 = #98c379
+bar-volume-foreground-1 = #98c379
+bar-volume-foreground-2 = #98c379
+bar-volume-foreground-3 = #98c379
+bar-volume-foreground-4 = #98c379
+bar-volume-foreground-5 = #e5c07b
+bar-volume-foreground-6 = #e06c75
+bar-volume-gradient = false
+bar-volume-indicator = ━
+bar-volume-indicator-foreground = #abb2bf
+bar-volume-fill = ─
+bar-volume-empty = ─
+bar-volume-empty-foreground = #3e4452
+
+[module/wireless-network]
+type = internal/network
+format-connected-foreground = #98c379
+format-disconnected-foreground = #98c379
+interface = wlan0
+interval = 4
+label-connected = WIFI %essid% %local_ip% 
+label-disconnected = Disconnected
+
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+poll-interval = 10
+format-full = <label-full>
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+label-full = Fully Charged
+label-full-margin = 2
+label-charging = BAT %percentage%% ϟ
+label-charging-margin = 2
+label-discharging = BAT %percentage%%
+label-discharging-margin = 2
+format-charging-foreground = #98c379
+format-discharging-foreground = #98c379
+[module/day]
+type = internal/date
+time = %a %e
+format = <label>
+label = %time%
+label-margin = 2
+format-background = #3e4452
+format-overline = #282c34
+format-underline = #282c34
+
+[module/clock]
+type = internal/date
+time = %H:%M
+format = <label>
+label = %time%
+label-margin = 2
+format-background = #98c379
+format-foreground = #282c34
+format-overline = #282c34
+format-underline = #282c34
+
+[module/memory]
+type = internal/memory
+; Seconds to sleep between updates
+; Default: 1
+interval = 10
+label = RAM %gb_used%/%gb_free%
+bar-used-width = 50
+label-margin = 2
+
+[module/cpu]
+type = internal/cpu
+interval = 10
+label = CPU %percentage%%
+label-margin = 2
+
+[module/backlight]
+type = internal/xbacklight
+label = BR %percentage%
+label-margin = 2

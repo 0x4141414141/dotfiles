@@ -1,0 +1,18 @@
+#!/bin/bash
+
+rofi -show drun -sidebar-mode \
+-modi run,drun,window \
+-hide-scrollbar true \
+-bw 4 \
+-lines 12 \
+-padding 32 \
+-spacing 12 \
+-width 64 \
+-location 0 \
+-columns 3 \
+-font "Bitstream Vera Sans 9" \
+-color-enabled true \
+-color-window "#282c34,#3e4452,#282c34" \
+-color-normal "#282c34,#93a1a1,#282c34,#282c34,#98c379" \
+-color-active "#282c34,#696ebf,#282c34,#282c34,#98c379" \
+-color-urgent "#282c34,#b08500,#282c34,#282c34,#98c379"
