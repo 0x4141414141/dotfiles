@@ -18,6 +18,7 @@ dpi-y = 96
 modules-left = launcher i3 xwindow
 modules-center = 
 modules-right = cpu  wireless-network memory battery backlight pulseaudio day clock
+tray-position = right
 
 [module/launcher]
 type = custom/text

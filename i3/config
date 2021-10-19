@@ -13,7 +13,8 @@ exec feh --bg-fill Downloads/6Downloads/6068906.jpg
 
 exec polybar top
 exec xsetroot -solid "#282c34"
-exec compton&
+#exec compton&
+exec_always --no-startup-id i3-auto-layout
 
 exec --no-startup-id i3-msg 'Workspace $ws1; exec firefox'
 exec --no-startip-id i3-msg 'Workspace $ws2; exec thunar'
@@ -21,7 +22,12 @@ exec --no-startup-id i3-msg 'Workspace $ws3; exec qterminal'
 exec --no-startup-id i3-msg 'Workspace $ws4; exec qterminal'
 exec --no-startup-id i3-msg 'Workspace $ws5; exec sleep 1 && virtualbox'
 
+#custom key bindings
+bindsym $mod+m exec --no-startup-id autorandr --change && killall polybar && polybar top
 
+bindsym $mod+Ctrl+l --no-startup-id slock
+
+bindsym $mod+space exec "rofi -show window"
 
 # i3 config file (v4)
 #
@@ -67,7 +73,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run 
-bindsym $mod+d exec --no-startup-id /home/hex41/.local/bin/launch
+bindsym $mod+d exec --no-startup-id /home/hex41/.config/scripts/launch
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -116,7 +122,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
